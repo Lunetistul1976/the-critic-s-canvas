@@ -129,8 +129,8 @@ const interests = [
 
 const values = [
   { title: 'Rigor with Warmth', desc: 'I believe criticism should be honest and exacting, but never cruel. Great analysis invites readers in rather than shutting them out.' },
-  { title: 'Curiosity over Consensus', desc: 'I'm drawn to work that challenges, surprises, and resists easy categorization. The most interesting stories are often the ones that don't fit neatly.' },
-  { title: 'Context Matters', desc: 'Art doesn't exist in a vacuum. I situate every review and essay within its cultural, historical, and social context.' },
+  { title: 'Curiosity over Consensus', desc: "I'm drawn to work that challenges, surprises, and resists easy categorization. The most interesting stories are often the ones that don't fit neatly." },
+  { title: 'Context Matters', desc: "Art doesn't exist in a vacuum. I situate every review and essay within its cultural, historical, and social context." },
   { title: 'Accessible Depth', desc: 'Complex ideas deserve clear language. I write for anyone who cares about stories, not just for other critics.' },
 ];
 
