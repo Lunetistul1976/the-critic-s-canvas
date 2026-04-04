@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Chip } from '@mui/material';
 import { motion } from 'framer-motion';
-import type { Project } from '../data/mockData';
+import { useTranslation } from 'react-i18next';
+import type { Project } from '../data/data';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 const Card = styled(motion.article)`
@@ -98,34 +99,56 @@ const ImpactBadge = styled.div`
   gap: 6px;
 `;
 
-const ProjectCard = ({ project }: { project: Project }) => (
-  <Card initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }} transition={{ duration: 0.4 }}>
-    <ImageWrapper>
-      <img src={project.thumbnail} alt={project.title} loading="lazy" />
-      <CategoryBadge>{project.category}</CategoryBadge>
-    </ImageWrapper>
-    <Content>
-      <Title>{project.title}</Title>
-      <Desc>{project.description}</Desc>
-      <Meta>
-        <span>{project.platform}</span>
-        <span>{project.date}</span>
-      </Meta>
-      <Tags>
-        {project.tags.map(tag => (
-          <Chip key={tag} label={tag} size="small" variant="outlined"
-            sx={{ fontSize: '0.7rem', height: 24, borderColor: 'hsl(35, 15%, 80%)', color: 'hsl(220, 10%, 45%)' }} />
-        ))}
-      </Tags>
-      {project.impact && (
-        <ImpactBadge>
-          <OpenInNewIcon sx={{ fontSize: 14 }} />
-          {project.impact}
-        </ImpactBadge>
-      )}
-    </Content>
-  </Card>
-);
+const categoryToTKey: Record<string, string> = {
+  'Movie Reviews': 'projects.categories.movieReviews',
+  'Video Content': 'projects.categories.videoContent',
+};
+
+const ProjectCard = ({ project }: { project: Project }) => {
+  const { t } = useTranslation();
+  const base = `projects.items.${project.id}`;
+  const title = t(`${base}.title`, { defaultValue: project.title });
+  const description = t(`${base}.description`, { defaultValue: project.description });
+  const platform = t(`${base}.platform`, { defaultValue: project.platform });
+  const date = t(`${base}.date`, { defaultValue: project.date });
+  const impact = project.impact
+    ? t(`${base}.impact`, { defaultValue: project.impact })
+    : undefined;
+  const tagsRaw = t(`${base}.tags`, { returnObjects: true });
+  const tags = Array.isArray(tagsRaw) ? (tagsRaw as string[]) : project.tags;
+  const categoryLabel = categoryToTKey[project.category]
+    ? t(categoryToTKey[project.category])
+    : project.category;
+
+  return (
+    <Card initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }} transition={{ duration: 0.4 }}>
+      <ImageWrapper>
+        <img src={project.thumbnail} alt={title} loading="lazy" />
+        <CategoryBadge>{categoryLabel}</CategoryBadge>
+      </ImageWrapper>
+      <Content>
+        <Title>{title}</Title>
+        <Desc>{description}</Desc>
+        <Meta>
+          <span>{platform}</span>
+          <span>{date}</span>
+        </Meta>
+        <Tags>
+          {tags.map(tag => (
+            <Chip key={tag} label={tag} size="small" variant="outlined"
+              sx={{ fontSize: '0.7rem', height: 24, borderColor: 'hsl(35, 15%, 80%)', color: 'hsl(220, 10%, 45%)' }} />
+          ))}
+        </Tags>
+        {impact && (
+          <ImpactBadge>
+            <OpenInNewIcon sx={{ fontSize: 14 }} />
+            {impact}
+          </ImpactBadge>
+        )}
+      </Content>
+    </Card>
+  );
+};
 
 export default ProjectCard;

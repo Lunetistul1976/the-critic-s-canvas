@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SectionHeading from '../components/SectionHeading';
 import ProjectCard from '../components/ProjectCard';
-import TestimonialCard from '../components/TestimonialCard';
-import { projects } from '../data/mockData';
+import { projects } from '../data/data';
 
 const Page = styled.div`
   min-height: 100vh;
@@ -90,8 +90,9 @@ const Section = styled.section`
 
 const FeaturedGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), min(100%, 400px)));
   gap: 28px;
+  justify-content: center;
 `;
 
 const QuoteBanner = styled(motion.section)`
@@ -119,12 +120,6 @@ const BannerSource = styled.cite`
   font-weight: 500;
 `;
 
-const TestimonialGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
-`;
-
 const CtaSection = styled(motion.section)`
   max-width: 700px;
   margin: 0 auto;
@@ -133,59 +128,58 @@ const CtaSection = styled(motion.section)`
 `;
 
 const HomePage = () => {
-  const featured = projects.slice(0, 3);
+  const { t } = useTranslation();
 
   return (
     <Page>
       <Hero>
         <HeroBg />
         <HeroContent initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          <HeroOverline>Writer · Critic · Storyteller</HeroOverline>
-          <HeroName>A. Morgan</HeroName>
-          <HeroTagline>Creative writer and critic focused on film, theater, and cultural storytelling.</HeroTagline>
-          <HeroIntro>
-            I explore how stories are told—on screen, on stage, and in culture at large. Through reviews, essays, and editorial projects, I examine the craft behind the narratives that shape how we see the world.
-          </HeroIntro>
+          <HeroOverline>{t('home.heroOverline')}</HeroOverline>
+          <HeroName>{t('common.siteName')}</HeroName>
+          <HeroTagline>{t('home.heroTagline')}</HeroTagline>
+          <HeroIntro>{t('home.heroIntro')}</HeroIntro>
           <HeroButtons>
             <Button component={Link} to="/projects" variant="contained"
               endIcon={<ArrowForwardIcon />}
               sx={{ bgcolor: 'hsl(38, 65%, 50%)', color: 'hsl(35, 30%, 96%)', '&:hover': { bgcolor: 'hsl(38, 65%, 42%)' }, px: 4, py: 1.3, fontSize: '0.95rem' }}>
-              Explore My Work
+              {t('home.ctaExplore')}
             </Button>
             <Button component={Link} to="/contact" variant="outlined"
               sx={{ borderColor: 'hsl(220, 15%, 13%)', color: 'hsl(220, 15%, 13%)', '&:hover': { borderColor: 'hsl(38, 65%, 50%)', color: 'hsl(38, 65%, 50%)' }, px: 4, py: 1.3, fontSize: '0.95rem' }}>
-              Get in Touch
+              {t('home.ctaTouch')}
             </Button>
           </HeroButtons>
         </HeroContent>
       </Hero>
 
       <Section>
-        <SectionHeading overline="Featured Work" title="Selected Projects" subtitle="A curated selection of recent reviews, essays, and editorial projects." align="center" />
+        <SectionHeading
+          overline={t('home.featuredOverline')}
+          title={t('home.featuredTitle')}
+          subtitle={t('home.featuredSubtitle')}
+          align="center"
+        />
         <FeaturedGrid>
-          {featured.map(p => <ProjectCard key={p.id} project={p} />)}
+          {projects.map(p => <ProjectCard key={p.id} project={p} />)}
         </FeaturedGrid>
       </Section>
 
       <QuoteBanner initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-        <BannerQuote>"The best criticism doesn't just evaluate—it illuminates. It reveals what we felt but couldn't name."</BannerQuote>
-        <BannerSource>A. Morgan</BannerSource>
+        <BannerQuote>&ldquo;{t('home.quote')}&rdquo;</BannerQuote>
+        <BannerSource>{t('home.quoteSource')}</BannerSource>
       </QuoteBanner>
 
-      <Section>
-        <SectionHeading overline="What Others Say" title="Kind Words" align="center" />
-        <TestimonialGrid>
-          <TestimonialCard quote="One of the most thoughtful emerging voices in theater criticism. Their writing has a rare combination of rigor and warmth." source="Senior Editor, Curtain Call Magazine" />
-          <TestimonialCard quote="A. Morgan's video essays bring cinematic analysis to life with exceptional visual storytelling and deep insight." source="Editorial Director, Letterboxd" />
-          <TestimonialCard quote="Their festival coverage is sharp, insightful, and beautifully written. A genuine talent in cultural criticism." source="Festival Coordinator, Berlinale" />
-        </TestimonialGrid>
-      </Section>
-
       <CtaSection initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-        <SectionHeading overline="Let's Connect" title="Interested in Collaboration?" subtitle="Whether it's a freelance assignment, editorial opportunity, or a conversation about cinema—I'd love to hear from you." align="center" />
+        <SectionHeading
+          overline={t('home.ctaOverline')}
+          title={t('home.ctaTitle')}
+          subtitle={t('home.ctaSubtitle')}
+          align="center"
+        />
         <Button component={Link} to="/contact" variant="contained"
           sx={{ bgcolor: 'hsl(38, 65%, 50%)', color: 'hsl(35, 30%, 96%)', '&:hover': { bgcolor: 'hsl(38, 65%, 42%)' }, px: 5, py: 1.4, fontSize: '1rem' }}>
-          Reach Out
+          {t('home.reachOut')}
         </Button>
       </CtaSection>
     </Page>

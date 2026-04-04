@@ -1,0 +1,116 @@
+{
+  "languageSwitcher": {
+    "label": "Idioma"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "work": "Trabajo",
+    "contact": "Contacto"
+  },
+  "common": {
+    "siteName": "Sergiu Cojocari"
+  },
+  "footer": {
+    "tagline": "Escritor y crítico creativo que explora las intersecciones del cine, el teatro y la narrativa cultural.",
+    "navigate": "Navegar",
+    "explore": "Explorar",
+    "movieReviews": "Críticas de cine",
+    "videoContent": "Contenido en vídeo",
+    "rights": "© {{year}} Sergiu Cojocari. Todos los derechos reservados."
+  },
+  "social": {
+    "instagram": "Instagram",
+    "email": "Correo",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn"
+  },
+  "home": {
+    "heroOverline": "Escritor · Crítico · Narrador",
+    "heroTagline": "Escritor y crítico creativo centrado en cine, teatro y narrativa cultural.",
+    "heroIntro": "Exploro cómo se cuentan las historias—en pantalla, en el escenario y en la cultura en conjunto. A través de críticas, ensayos y proyectos editoriales, examino el oficio detrás de las narrativas que moldean cómo vemos el mundo.",
+    "ctaExplore": "Ver mi trabajo",
+    "ctaTouch": "Contactar",
+    "featuredOverline": "Destacados",
+    "featuredTitle": "Proyectos seleccionados",
+    "featuredSubtitle": "Críticas de cine y teatro, además de videoensayos y trabajo audiovisual crítico.",
+    "quote": "La mejor crítica no solo evalúa—ilumina. Revela lo que sentíamos pero no podíamos nombrar.",
+    "quoteSource": "Sergiu Cojocari",
+    "ctaOverline": "Conectemos",
+    "ctaTitle": "¿Interesado en colaborar?",
+    "ctaSubtitle": "Tanto si es un encargo freelance, una oportunidad editorial o una charla sobre cine—me encantaría saber de ti.",
+    "reachOut": "Escríbeme"
+  },
+  "about": {
+    "overline": "Sobre mí",
+    "title": "La historia detrás de la crítica",
+    "headshotAlt": "Retrato profesional de Sergiu Cojocari",
+    "bio1": "Soy Sergiu Cojocari—escritor y crítico en la intersección del cine, el teatro y la narrativa cultural. Entre Nueva York y Londres, paso el tiempo viendo, pensando y escribiendo sobre cómo las historias nos mueven.",
+    "bio2": "Mi trabajo ha aparecido en The Criterion Observer, IndieWire, Curtain Call Magazine y Theater Today. También publico «Reel & Stage», un boletín semanal con casi 5.000 suscriptores apasionados por el oficio narrativo.",
+    "bio3": "Ya sea reseñando un largometraje debut en un festival, analizando una producción teatral audaz o explorando una tendencia cultural en una serie editorial, mi objetivo es siempre el mismo: ayudar a ver con más claridad qué hace resonar una historia.",
+    "focusOverline": "Áreas de interés",
+    "focusTitle": "De qué hablo",
+    "interestFilm": "Cine",
+    "interestPerformance": "Performance",
+    "interestCulture": "Cultura",
+    "interestStorytelling": "Narrativa",
+    "valuesOverline": "Filosofía",
+    "valuesTitle": "Mi enfoque de la crítica",
+    "valuesSubtitle": "Los principios que guían cómo me relaciono con el arte y la narrativa.",
+    "value1Title": "Rigor con calidez",
+    "value1Desc": "Creo que la crítica debe ser honesta y exigente, nunca cruel. Un gran análisis invita al lector a entrar en lugar de cerrarle la puerta.",
+    "value2Title": "Curiosidad frente al consenso",
+    "value2Desc": "Me atrae el trabajo que desafía, sorprende y resiste una etiqueta fácil. Las historias más interesantes suelen ser las que no encajan del todo.",
+    "value3Title": "El contexto importa",
+    "value3Desc": "El arte no existe en el vacío. Situo cada crítica y ensayo en su contexto cultural, histórico y social.",
+    "value4Title": "Profundidad accesible",
+    "value4Desc": "Las ideas complejas merecen un lenguaje claro. Escribo para quien ama las historias, no solo para otros críticos."
+  },
+  "projects": {
+    "pageOverline": "Portafolio",
+    "pageTitle": "Trabajo y proyectos",
+    "pageSubtitle": "Críticas de cine y videoensayos—filtra por tipo abajo.",
+    "categories": {
+      "all": "Todo",
+      "movieReviews": "Críticas de cine",
+      "videoContent": "Contenido en vídeo"
+    },
+    "items": {
+      "1": {
+        "title": "Crítica: Cómo el silencio genera tensión en el cine psicológico moderno",
+        "description": "Un análisis profundo de las decisiones de diseño sonoro en thrillers psicológicos contemporáneos y cómo los directores usan el silencio como herramienta narrativa.",
+        "platform": "The Criterion Observer",
+        "date": "marzo de 2025",
+        "impact": "En portada, 12K lecturas",
+        "tags": ["Análisis fílmico", "Diseño sonoro", "Psicología"]
+      },
+      "5": {
+        "title": "Videoensayo: El lenguaje visual de Wong Kar-wai",
+        "description": "Un videoensayo de 15 minutos que desglosa técnicas cinematográficas, paletas de color y ritmos emocionales en la filmografía de Wong Kar-wai.",
+        "platform": "YouTube",
+        "date": "noviembre de 2024",
+        "impact": "85K visualizaciones, destacado por Letterboxd",
+        "tags": ["Videoensayo", "Cinematografía", "Wong Kar-wai"]
+      }
+    }
+  },
+  "contact": {
+    "overline": "Contacto",
+    "title": "Trabajemos juntos",
+    "subtitle": "Abierto a encargos freelance, colaboraciones editoriales y alianzas creativas.",
+    "infoText": "Tanto si buscas un crítico de cine, reseñas de teatro, colaboración editorial o socio creativo—me encantaría conocer la oportunidad.",
+    "thankYou": "¡Gracias!",
+    "thankYouSub": "Te responderé pronto.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Enviando…",
+    "errorGeneric": "Algo salió mal. Por favor, inténtalo de nuevo."
+  },
+  "notFound": {
+    "title": "¡Vaya! Página no encontrada",
+    "homeLink": "Volver al inicio"
+  }
+}

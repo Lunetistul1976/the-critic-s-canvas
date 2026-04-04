@@ -38,48 +38,14 @@ export const projects: Project[] = [
     platform: 'The Criterion Observer', date: 'March 2025', tags: ['Film Analysis', 'Sound Design', 'Psychology'],
     thumbnail: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600', link: '#', impact: 'Featured on front page, 12K reads'
   },
-  {
-    id: '2', title: 'Stage and Space: Commentary on Minimalist Set Design in Contemporary Theater',
-    category: 'Theater Reviews', description: 'A critical essay examining how minimalist staging transforms audience perception and emotional engagement in modern theatrical productions.',
-    platform: 'Curtain Call Magazine', date: 'February 2025', tags: ['Theater', 'Set Design', 'Minimalism'],
-    thumbnail: 'https://images.unsplash.com/photo-1503095396549-807759245b35?w=600', link: '#', impact: 'Syndicated across 3 publications'
-  },
-  {
-    id: '3', title: 'Festival Dispatch: Emerging Voices from Independent European Film',
-    category: 'Essays', description: 'Coverage from the Berlin International Film Festival highlighting debut filmmakers reshaping European independent cinema.',
-    platform: 'IndieWire Guest Column', date: 'January 2025', tags: ['Film Festival', 'European Cinema', 'Indie Film'],
-    thumbnail: 'https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=600', link: '#', impact: 'Led to festival press accreditation'
-  },
-  {
-    id: '4', title: 'Editorial Series: Women Reshaping Modern Horror Storytelling',
-    category: 'Editorial Projects', description: 'A five-part editorial series profiling female directors and writers who are redefining the horror genre with fresh perspectives and complex narratives.',
-    platform: 'Original Newsletter', date: 'December 2024', tags: ['Horror', 'Women in Film', 'Editorial'],
-    thumbnail: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600', link: '#', impact: '2,400 newsletter subscribers gained'
-  },
+  
   {
     id: '5', title: 'Video Essay: The Visual Language of Wong Kar-wai',
     category: 'Video Content', description: 'A 15-minute video essay dissecting the cinematographic techniques, color palettes, and emotional rhythms in Wong Kar-wai\'s filmography.',
     platform: 'YouTube', date: 'November 2024', tags: ['Video Essay', 'Cinematography', 'Wong Kar-wai'],
     thumbnail: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=600', link: '#', impact: '85K views, featured by Letterboxd'
   },
-  {
-    id: '6', title: 'Interview: A Conversation with an Emerging Playwright on Identity and Belonging',
-    category: 'Interviews', description: 'An extended interview exploring themes of diaspora, cultural identity, and theatrical storytelling with an award-winning emerging playwright.',
-    platform: 'The Stage Door', date: 'October 2024', tags: ['Interview', 'Playwright', 'Identity'],
-    thumbnail: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600', link: '#'
-  },
-  {
-    id: '7', title: 'Social Campaign: #CinemaRediscovered — Forgotten Classics Series',
-    category: 'Editorial Projects', description: 'Curated a 30-day social media campaign highlighting overlooked films from the 1970s–90s, combining micro-reviews with archival imagery.',
-    platform: 'Instagram / Twitter', date: 'September 2024', tags: ['Social Media', 'Film History', 'Campaign'],
-    thumbnail: 'https://images.unsplash.com/photo-1595769816263-9b910be24d5f?w=600', link: '#', impact: '1.2M impressions, 8K new followers'
-  },
-  {
-    id: '8', title: 'Review: Reinterpreting Chekhov for a Post-Pandemic Stage',
-    category: 'Theater Reviews', description: 'A critical review of a bold new production of The Cherry Orchard that reimagines Chekhov through the lens of isolation and collective grief.',
-    platform: 'Theater Today', date: 'August 2024', tags: ['Theater', 'Chekhov', 'Review'],
-    thumbnail: 'https://images.unsplash.com/photo-1460881680858-30d872d5b530?w=600', link: '#'
-  },
+  
 ];
 
 export const articles: Article[] = [
@@ -132,5 +98,6 @@ export const accomplishments: Accomplishment[] = [
   { id: '8', title: 'Editor Quote — Curtain Call Magazine', type: 'Testimonial', description: '"One of the most thoughtful emerging voices in theater criticism. Their writing has a rare combination of rigor and warmth." — Senior Editor', year: '2024' },
 ];
 
-export const categories = ['All', 'Movie Reviews', 'Theater Reviews', 'Essays', 'Interviews', 'Video Content', 'Editorial Projects'];
+
+export const projectCategories = ['All', 'Movie Reviews', 'Video Content'] as const;
 export const articleCategories = ['All', 'Film Analysis', 'Theater Commentary', 'Culture Writing'];

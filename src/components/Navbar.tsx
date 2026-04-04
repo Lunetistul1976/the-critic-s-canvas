@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { IconButton, Drawer, List, ListItemButton, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Nav = styled.nav`
   position: fixed;
@@ -42,7 +44,7 @@ const Logo = styled(Link)`
 
 const NavLinks = styled.div`
   display: flex;
-  gap: 32px;
+  gap: 24px;
   align-items: center;
 
   @media (max-width: 768px) {
@@ -83,35 +85,39 @@ const StyledNavLink = styled(Link)<{ $active?: boolean }>`
 const MobileMenuButton = styled.div`
   display: none;
   @media (max-width: 768px) {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 `;
 
-const navItems = [
-  { path: '/', label: 'Home' },
-  { path: '/about', label: 'About' },
-  { path: '/projects', label: 'Work' },
-  { path: '/accomplishments', label: 'Highlights' },
-  { path: '/writing', label: 'Writing' },
-  { path: '/contact', label: 'Contact' },
-];
+const navPaths = ['/', '/about', '/projects', '/contact'] as const;
+const navKeys = ['home', 'about', 'work', 'contact'] as const;
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
+
+  const navItems = useMemo(
+    () => navPaths.map((path, i) => ({ path, label: t(`nav.${navKeys[i]}`) })),
+    [t],
+  );
 
   return (
     <Nav>
       <NavInner>
-        <Logo to="/">A<span>.</span> Morgan</Logo>
+        <Logo to="/">{t('common.siteName')}</Logo>
         <NavLinks>
           {navItems.map(item => (
             <StyledNavLink key={item.path} to={item.path} $active={location.pathname === item.path}>
               {item.label}
             </StyledNavLink>
           ))}
+          <LanguageSwitcher />
         </NavLinks>
         <MobileMenuButton>
+          <LanguageSwitcher />
           <IconButton onClick={() => setDrawerOpen(true)} sx={{ color: 'hsl(220, 15%, 13%)' }}>
             <MenuIcon />
           </IconButton>

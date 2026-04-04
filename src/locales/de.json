@@ -1,0 +1,116 @@
+{
+  "languageSwitcher": {
+    "label": "Sprache"
+  },
+  "nav": {
+    "home": "Start",
+    "about": "Über mich",
+    "work": "Arbeit",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "siteName": "Sergiu Cojocari"
+  },
+  "footer": {
+    "tagline": "Kreativer Autor und Kritiker an der Schnittstelle von Film, Theater und kulturellem Erzählen.",
+    "navigate": "Navigation",
+    "explore": "Entdecken",
+    "movieReviews": "Filmkritiken",
+    "videoContent": "Video-Inhalte",
+    "rights": "© {{year}} Sergiu Cojocari. Alle Rechte vorbehalten."
+  },
+  "social": {
+    "instagram": "Instagram",
+    "email": "E-Mail",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn"
+  },
+  "home": {
+    "heroOverline": "Autor · Kritiker · Erzähler",
+    "heroTagline": "Kreativer Autor und Kritiker mit Schwerpunkt Film, Theater und kulturelles Storytelling.",
+    "heroIntro": "Ich untersuche, wie Geschichten erzählt werden—auf der Leinwand, auf der Bühne und in der Kultur insgesamt. In Kritiken, Essays und Redaktionsprojekten betrachte ich das Handwerk hinter den Erzählungen, die unser Weltbild prägen.",
+    "ctaExplore": "Meine Arbeit entdecken",
+    "ctaTouch": "Kontakt aufnehmen",
+    "featuredOverline": "Hervorgehoben",
+    "featuredTitle": "Ausgewählte Projekte",
+    "featuredSubtitle": "Film- und Theaterkritiken sowie Video-Essays und kritische Videolarbeit.",
+    "quote": "Die beste Kritik bewertet nicht nur—sie erhellt. Sie macht sichtbar, was wir fühlten, aber nicht benennen konnten.",
+    "quoteSource": "Sergiu Cojocari",
+    "ctaOverline": "Lassen Sie uns sprechen",
+    "ctaTitle": "Interesse an einer Zusammenarbeit?",
+    "ctaSubtitle": "Ob freier Auftrag, redaktionelle Chance oder ein Gespräch über Kino—Ich freue mich auf Ihre Nachricht.",
+    "reachOut": "Nachricht senden"
+  },
+  "about": {
+    "overline": "Über mich",
+    "title": "Die Geschichte hinter der Kritik",
+    "headshotAlt": "Professionelles Porträt von Sergiu Cojocari",
+    "bio1": "Ich bin Sergiu Cojocari—Autor und Kritiker an der Schnittstelle von Film, Theater und kulturellem Erzählen. Zwischen New York und London verbringe ich meine Zeit damit zuzusehen, nachzudenken und darüber zu schreiben, wie Geschichten uns bewegen.",
+    "bio2": "Meine Texte erschienen in The Criterion Observer, IndieWire, Curtain Call Magazine und Theater Today. Außerdem gibt es „Reel & Stage“, einen wöchentlichen Newsletter mit fast 5.000 Abonnenten, die sich für narrative Handwerkskunst interessieren.",
+    "bio3": "Ob ich ein Debüt auf einem Festival bespreche, eine mutige Theaterproduktion analysiere oder einen kulturellen Trend in einer Serie erkunde—mein Ziel bleibt: Menschen klarer sehen zu lassen, was eine Geschichte trägt.",
+    "focusOverline": "Schwerpunkte",
+    "focusTitle": "Worüber ich schreibe",
+    "interestFilm": "Film",
+    "interestPerformance": "Performance",
+    "interestCulture": "Kultur",
+    "interestStorytelling": "Storytelling",
+    "valuesOverline": "Haltung",
+    "valuesTitle": "Mein Ansatz in der Kritik",
+    "valuesSubtitle": "Die Prinzipien, die mein Verhältnis zu Kunst und Erzählen leiten.",
+    "value1Title": "Strenge mit Wärme",
+    "value1Desc": "Kritik soll ehrlich und anspruchsvoll sein, niemals grausam. Große Analyse lädt ein statt auszuschließen.",
+    "value2Title": "Neugier statt Konsens",
+    "value2Desc": "Mich zieht Arbeit an, die herausfordert, überrascht und sich einfachen Schubladen widersetzt. Die spannendsten Geschichten passen oft in keine Kategorie.",
+    "value3Title": "Kontext zählt",
+    "value3Desc": "Kunst steht nicht im Vakuum. Ich ordne jede Kritik und jeden Essay in seinen kulturellen, historischen und sozialen Kontext ein.",
+    "value4Title": "Zugängliche Tiefe",
+    "value4Desc": "Komplexe Ideen verdienen klare Sprache. Ich schreibe für alle, denen Geschichten wichtig sind—nicht nur für andere Kritiker."
+  },
+  "projects": {
+    "pageOverline": "Portfolio",
+    "pageTitle": "Arbeit & Projekte",
+    "pageSubtitle": "Filmkritiken und Video-Essays—filtern Sie unten nach Typ.",
+    "categories": {
+      "all": "Alle",
+      "movieReviews": "Filmkritiken",
+      "videoContent": "Video-Inhalte"
+    },
+    "items": {
+      "1": {
+        "title": "Kritik: Wie Stille Spannung im modernen Psychothriller erzeugt",
+        "description": "Eine vertiefte Analyse von Sounddesign in zeitgenössischen Psychothrillern und wie Regisseur:innen Stille als narratives Mittel einsetzen.",
+        "platform": "The Criterion Observer",
+        "date": "März 2025",
+        "impact": "Auf der Startseite, 12K Aufrufe",
+        "tags": ["Filmanalyse", "Sounddesign", "Psychologie"]
+      },
+      "5": {
+        "title": "Video-Essay: Die Bildsprache von Wong Kar-wai",
+        "description": "Ein 15-minütiges Video-Essay über cinematografische Techniken, Farbpaletten und emotionale Rhythmen in Wong Kar-wais Werk.",
+        "platform": "YouTube",
+        "date": "November 2024",
+        "impact": "85K Aufrufe, von Letterboxd hervorgehoben",
+        "tags": ["Video-Essay", "Cinematografie", "Wong Kar-wai"]
+      }
+    }
+  },
+  "contact": {
+    "overline": "Kontakt",
+    "title": "Lassen Sie uns zusammenarbeiten",
+    "subtitle": "Offen für freie Aufträge, redaktionelle Kooperationen und kreative Partnerschaften.",
+    "infoText": "Ob Filmkritik, Theaterrezension, redaktioneller Beitrag oder kreative Kooperation—Ich höre gern von Ihrer Gelegenheit.",
+    "thankYou": "Vielen Dank!",
+    "thankYouSub": "Ich melde mich bald bei Ihnen.",
+    "name": "Name",
+    "email": "E-Mail",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet…",
+    "errorGeneric": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  },
+  "notFound": {
+    "title": "Hoppla! Seite nicht gefunden",
+    "homeLink": "Zur Startseite"
+  }
+}

@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { TextField, Button, IconButton } from '@mui/material';
+import { TextField, Button, IconButton, CircularProgress, Alert } from '@mui/material';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import SectionHeading from '../components/SectionHeading';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SendIcon from '@mui/icons-material/Send';
+import { SOCIAL_EMAIL, SOCIAL_EMAIL_HREF, SOCIAL_LINKS } from '../data/socials';
+import { submitContactForm } from '../lib/contactFormSubmit';
 
 const Page = styled.div`
   padding-top: 72px;
@@ -79,41 +78,6 @@ const Form = styled(motion.form)`
   gap: 20px;
 `;
 
-const NewsletterSection = styled(motion.section)`
-  background: hsl(220, 15%, 13%);
-  padding: 64px 24px;
-  text-align: center;
-`;
-
-const NewsletterInner = styled.div`
-  max-width: 500px;
-  margin: 0 auto;
-`;
-
-const NewsletterTitle = styled.h3`
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  color: hsl(35, 30%, 96%);
-  margin-bottom: 12px;
-`;
-
-const NewsletterDesc = styled.p`
-  font-size: 0.9rem;
-  color: hsl(35, 15%, 70%);
-  margin-bottom: 24px;
-  line-height: 1.65;
-`;
-
-const NewsletterForm = styled.form`
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-
-  @media (max-width: 500px) {
-    flex-direction: column;
-  }
-`;
-
 const textFieldSx = {
   '& .MuiOutlinedInput-root': {
     fontFamily: "'DM Sans', sans-serif",
@@ -125,70 +89,147 @@ const textFieldSx = {
 };
 
 const ContactPage = () => {
+  const { t } = useTranslation();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitError(null);
+    setSubmitting(true);
+    try {
+      await submitContactForm({ name, email, subject, message });
+      setSubmitted(true);
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : t('contact.errorGeneric'));
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
     <Page>
       <Section>
-        <SectionHeading overline="Contact" title="Let's Work Together"
-          subtitle="Open to freelance assignments, editorial collaborations, and creative partnerships." />
+        <SectionHeading
+          overline={t('contact.overline')}
+          title={t('contact.title')}
+          subtitle={t('contact.subtitle')}
+        />
         <Grid>
           <ContactInfo initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-            <InfoText>
-              Whether you're looking for a film critic, theater reviewer, editorial contributor, or creative collaborator—I'd love to hear about the opportunity.
-            </InfoText>
-            <ContactItem href="mailto:hello@amorgan.com">
+            <InfoText>{t('contact.infoText')}</InfoText>
+            <ContactItem href={SOCIAL_EMAIL_HREF}>
               <EmailOutlinedIcon sx={{ fontSize: 20, color: 'hsl(38, 65%, 50%)' }} />
-              hello@amorgan.com
+              {SOCIAL_EMAIL}
             </ContactItem>
             <SocialRow>
-              <IconButton size="small" aria-label="Twitter"><TwitterIcon fontSize="small" /></IconButton>
-              <IconButton size="small" aria-label="Instagram"><InstagramIcon fontSize="small" /></IconButton>
-              <IconButton size="small" aria-label="YouTube"><YouTubeIcon fontSize="small" /></IconButton>
-              <IconButton size="small" aria-label="LinkedIn"><LinkedInIcon fontSize="small" /></IconButton>
+              {SOCIAL_LINKS.filter(({ id }) => id !== 'email').map(({ id, href, Icon }) => (
+                <IconButton
+                  key={id}
+                  component="a"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  size="small"
+                  aria-label={t(`social.${id}`)}
+                >
+                  <Icon fontSize="small" />
+                </IconButton>
+              ))}
             </SocialRow>
           </ContactInfo>
 
-          <Form onSubmit={handleSubmit} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
+          <Form
+            onSubmit={handleSubmit}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            aria-busy={submitting}
+          >
             {submitted ? (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ textAlign: 'center', padding: '40px 0' }}>
-                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.2rem', color: 'hsl(220, 15%, 13%)', marginBottom: 8 }}>Thank you!</p>
-                <p style={{ fontSize: '0.9rem', color: 'hsl(220, 10%, 45%)' }}>I'll get back to you soon.</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.2rem', color: 'hsl(220, 15%, 13%)', marginBottom: 8 }}>{t('contact.thankYou')}</p>
+                <p style={{ fontSize: '0.9rem', color: 'hsl(220, 10%, 45%)' }}>{t('contact.thankYouSub')}</p>
               </motion.div>
             ) : (
               <>
-                <TextField label="Name" fullWidth size="small" required sx={textFieldSx} />
-                <TextField label="Email" type="email" fullWidth size="small" required sx={textFieldSx} />
-                <TextField label="Subject" fullWidth size="small" sx={textFieldSx} />
-                <TextField label="Message" fullWidth multiline rows={4} required sx={textFieldSx} />
-                <Button type="submit" variant="contained" endIcon={<SendIcon />}
-                  sx={{ bgcolor: 'hsl(38, 65%, 50%)', color: 'hsl(35, 30%, 96%)', '&:hover': { bgcolor: 'hsl(38, 65%, 42%)' }, alignSelf: 'flex-start', px: 4 }}>
-                  Send Message
+                {submitError ? (
+                  <Alert severity="error" onClose={() => setSubmitError(null)} sx={{ fontFamily: "'DM Sans', sans-serif" }}>
+                    {submitError}
+                  </Alert>
+                ) : null}
+                <TextField
+                  label={t('contact.name')}
+                  name="name"
+                  autoComplete="name"
+                  fullWidth
+                  size="small"
+                  required
+                  disabled={submitting}
+                  value={name}
+                  onChange={(ev) => setName(ev.target.value)}
+                  sx={textFieldSx}
+                />
+                <TextField
+                  label={t('contact.email')}
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  fullWidth
+                  size="small"
+                  required
+                  disabled={submitting}
+                  value={email}
+                  onChange={(ev) => setEmail(ev.target.value)}
+                  sx={textFieldSx}
+                />
+                <TextField
+                  label={t('contact.subject')}
+                  name="subject"
+                  fullWidth
+                  size="small"
+                  disabled={submitting}
+                  value={subject}
+                  onChange={(ev) => setSubject(ev.target.value)}
+                  sx={textFieldSx}
+                />
+                <TextField
+                  label={t('contact.message')}
+                  name="message"
+                  fullWidth
+                  multiline
+                  rows={4}
+                  required
+                  disabled={submitting}
+                  value={message}
+                  onChange={(ev) => setMessage(ev.target.value)}
+                  sx={textFieldSx}
+                />
+                <Button
+                  type="submit"
+                  variant="contained"
+                  disabled={submitting}
+                  endIcon={submitting ? <CircularProgress size={18} color="inherit" /> : <SendIcon />}
+                  sx={{
+                    bgcolor: 'hsl(38, 65%, 50%)',
+                    color: 'hsl(35, 30%, 96%)',
+                    '&:hover': { bgcolor: 'hsl(38, 65%, 42%)' },
+                    alignSelf: 'flex-start',
+                    px: 4,
+                  }}
+                >
+                  {submitting ? t('contact.sending') : t('contact.send')}
                 </Button>
               </>
             )}
           </Form>
         </Grid>
       </Section>
-
-      <NewsletterSection initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-        <NewsletterInner>
-          <NewsletterTitle>Subscribe to Reel & Stage</NewsletterTitle>
-          <NewsletterDesc>Weekly insights on film, theater, and cultural storytelling. Join 4,800+ readers.</NewsletterDesc>
-          <NewsletterForm onSubmit={e => e.preventDefault()}>
-            <TextField size="small" placeholder="Your email" variant="outlined"
-              sx={{ '& .MuiOutlinedInput-root': { bgcolor: 'hsl(220, 10%, 18%)', color: 'hsl(35, 30%, 90%)', '& fieldset': { borderColor: 'hsl(220, 10%, 28%)' } }, minWidth: 240 }} />
-            <Button variant="contained" sx={{ bgcolor: 'hsl(38, 65%, 50%)', color: 'hsl(35, 30%, 96%)', '&:hover': { bgcolor: 'hsl(38, 65%, 42%)' } }}>
-              Subscribe
-            </Button>
-          </NewsletterForm>
-        </NewsletterInner>
-      </NewsletterSection>
     </Page>
   );
 };

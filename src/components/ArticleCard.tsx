@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import type { Article } from '../data/mockData';
+import type { Article } from '../data/data';
 import StarIcon from '@mui/icons-material/Star';
 
 const Card = styled(motion.article)<{ $featured?: boolean }>`

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import SectionHeading from '../components/SectionHeading';
 import TestimonialCard from '../components/TestimonialCard';
-import { accomplishments } from '../data/mockData';
+import { accomplishments } from '../data/data';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import ArticleIcon from '@mui/icons-material/Article';
 import GroupsIcon from '@mui/icons-material/Groups';
@@ -139,7 +139,7 @@ const AccomplishmentsPage = () => (
         <SectionHeading overline="Testimonials" title="What Editors & Collaborators Say" align="center" />
         <TestimonialGrid>
           <TestimonialCard quote="Their festival coverage is sharp, insightful, and beautifully written. A genuine talent in cultural criticism." source="Festival Coordinator, Berlinale" />
-          <TestimonialCard quote="A. Morgan brings a unique blend of academic depth and genuine passion to every piece. A pleasure to work with." source="Editor-in-Chief, Theater Today" />
+          <TestimonialCard quote="Sergiu Cojocari brings a unique blend of academic depth and genuine passion to every piece. A pleasure to work with." source="Editor-in-Chief, Theater Today" />
         </TestimonialGrid>
       </TestimonialInner>
     </TestimonialSection>

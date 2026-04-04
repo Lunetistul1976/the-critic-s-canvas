@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import { useTranslation } from 'react-i18next';
+import { SOCIAL_LINKS } from '../data/socials';
 
 const FooterWrapper = styled.footer`
   background: hsl(220, 15%, 13%);
@@ -65,6 +63,11 @@ const SocialRow = styled.div`
   margin-top: 8px;
 
   a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.25rem;
+    min-height: 2.25rem;
     color: hsl(35, 15%, 65%);
     transition: color 0.2s;
     &:hover { color: hsl(38, 65%, 50%); }
@@ -80,36 +83,48 @@ const BottomBar = styled.div`
   text-align: center;
 `;
 
-const Footer = () => (
-  <FooterWrapper>
-    <FooterInner>
-      <div>
-        <FooterLogo>A<span>.</span> Morgan</FooterLogo>
-        <FooterText>Creative writer and critic exploring the intersections of film, theater, and cultural storytelling.</FooterText>
-        <SocialRow>
-          <a href="#" aria-label="Email"><EmailOutlinedIcon fontSize="small" /></a>
-          <a href="#" aria-label="Twitter"><TwitterIcon fontSize="small" /></a>
-          <a href="#" aria-label="Instagram"><InstagramIcon fontSize="small" /></a>
-          <a href="#" aria-label="YouTube"><YouTubeIcon fontSize="small" /></a>
-        </SocialRow>
-      </div>
-      <div>
-        <FooterHeading>Navigate</FooterHeading>
-        <FooterLink to="/about">About</FooterLink>
-        <FooterLink to="/projects">Work</FooterLink>
-        <FooterLink to="/writing">Writing</FooterLink>
-        <FooterLink to="/contact">Contact</FooterLink>
-      </div>
-      <div>
-        <FooterHeading>Explore</FooterHeading>
-        <FooterLink to="/accomplishments">Highlights</FooterLink>
-        <FooterLink to="/projects">Film Reviews</FooterLink>
-        <FooterLink to="/projects">Theater Reviews</FooterLink>
-        <FooterLink to="/writing">Essays</FooterLink>
-      </div>
-    </FooterInner>
-    <BottomBar>© {new Date().getFullYear()} A. Morgan. All rights reserved.</BottomBar>
-  </FooterWrapper>
-);
+const Footer = () => {
+  const { t } = useTranslation();
+  const year = new Date().getFullYear();
+
+  return (
+    <FooterWrapper>
+      <FooterInner>
+        <div>
+          <FooterLogo>{t('common.siteName')}</FooterLogo>
+          <FooterText>{t('footer.tagline')}</FooterText>
+          <SocialRow>
+            {SOCIAL_LINKS.map(({ id, href, Icon }) => (
+              <a
+                key={id}
+                href={href}
+                aria-label={t(`social.${id}`)}
+                {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                <Icon fontSize="small" />
+              </a>
+            ))}
+          </SocialRow>
+        </div>
+        <div>
+          <FooterHeading>{t('footer.navigate')}</FooterHeading>
+          <FooterLink to="/about">{t('nav.about')}</FooterLink>
+          <FooterLink to="/projects">{t('nav.work')}</FooterLink>
+          <FooterLink to="/contact">{t('nav.contact')}</FooterLink>
+        </div>
+        <div>
+          <FooterHeading>{t('footer.explore')}</FooterHeading>
+          <FooterLink to={`/projects?category=${encodeURIComponent('Movie Reviews')}`}>
+            {t('footer.movieReviews')}
+          </FooterLink>
+          <FooterLink to={`/projects?category=${encodeURIComponent('Video Content')}`}>
+            {t('footer.videoContent')}
+          </FooterLink>
+        </div>
+      </FooterInner>
+      <BottomBar>{t('footer.rights', { year })}</BottomBar>
+    </FooterWrapper>
+  );
+};
 
 export default Footer;

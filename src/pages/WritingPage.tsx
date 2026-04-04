@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Chip } from '@mui/material';
 import SectionHeading from '../components/SectionHeading';
 import ArticleCard from '../components/ArticleCard';
-import { articles, articleCategories } from '../data/mockData';
+import { articles, articleCategories } from '../data/data';
 
 const Page = styled.div`
   padding-top: 72px;

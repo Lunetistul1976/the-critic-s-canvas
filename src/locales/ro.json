@@ -1,0 +1,116 @@
+{
+  "languageSwitcher": {
+    "label": "Limbă"
+  },
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre",
+    "work": "Lucrări",
+    "contact": "Contact"
+  },
+  "common": {
+    "siteName": "Sergiu Cojocari"
+  },
+  "footer": {
+    "tagline": "Scriitor și critic creativ care explorează intersecțiile dintre film, teatru și povestire culturală.",
+    "navigate": "Navigare",
+    "explore": "Explorează",
+    "movieReviews": "Recenzii de film",
+    "videoContent": "Conținut video",
+    "rights": "© {{year}} Sergiu Cojocari. Toate drepturile rezervate."
+  },
+  "social": {
+    "instagram": "Instagram",
+    "email": "E-mail",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn"
+  },
+  "home": {
+    "heroOverline": "Scriitor · Critic · Povestitor",
+    "heroTagline": "Scriitor și critic creativ axat pe film, teatru și povestire culturală.",
+    "heroIntro": "Explorez cum se spun poveștile—pe ecran, pe scenă și în cultură în ansamblu. Prin recenzii, eseuri și proiecte editoriale, analizez meșteșugul din spatele narațiunilor care ne modelează felul în care vedem lumea.",
+    "ctaExplore": "Explorează lucrările mele",
+    "ctaTouch": "Ia legătura",
+    "featuredOverline": "Lucrări în evidență",
+    "featuredTitle": "Proiecte selectate",
+    "featuredSubtitle": "Recenzii de film și de teatru, plus eseuri video și lucrări video critice.",
+    "quote": "Cea mai bună critică nu doar evaluează—luminează. Dezvăluie ce simțeam, dar nu puteam numi.",
+    "quoteSource": "Sergiu Cojocari",
+    "ctaOverline": "Hai să discutăm",
+    "ctaTitle": "Interesat de colaborare?",
+    "ctaSubtitle": "Fie că e un proiect freelance, o oportunitate editorială sau o conversație despre cinema—mi-ar plăcea să aud de la tine.",
+    "reachOut": "Scrie-mi"
+  },
+  "about": {
+    "overline": "Despre",
+    "title": "Povestea din spatele criticii",
+    "headshotAlt": "Portret profesional al lui Sergiu Cojocari",
+    "bio1": "Sunt Sergiu Cojocari—scriitor și critic la intersecția dintre film, teatru și povestire culturală. Între New York și Londra, îmi petrec timpul privind, gândind și scriind despre cum ne mișcă poveștile.",
+    "bio2": "Lucrările mele au apărut în The Criterion Observer, IndieWire, Curtain Call Magazine și Theater Today. Public și „Reel & Stage”, un newsletter săptămânal cu aproape 5.000 de abonați pasionați de meșteșugul narațiunii.",
+    "bio3": "Fie că recenzez un lungmetraj de debut la un festival, analizez o producție teatrală îndrăzneață sau explorez o tendință culturală într-o serie editorială, obiectivul e mereu același: să ajut oamenii să vadă mai clar ce face o poveste să rezoneze.",
+    "focusOverline": "Domenii de interes",
+    "focusTitle": "Despre ce vorbesc",
+    "interestFilm": "Film",
+    "interestPerformance": "Performance",
+    "interestCulture": "Cultură",
+    "interestStorytelling": "Povestire",
+    "valuesOverline": "Filozofie",
+    "valuesTitle": "Abordarea mea în critică",
+    "valuesSubtitle": "Principiile care ghidează felul în care mă raportez la artă și la povestire.",
+    "value1Title": "Rigoare cu căldură",
+    "value1Desc": "Cred că critica trebuie să fie onestă și exigentă, dar niciodată crudă. O analiză mare invită cititorii înăuntru, nu îi îndepărtează.",
+    "value2Title": "Curiozitate în loc de consens",
+    "value2Desc": "Mă atrage lucrul care provoacă, surprinde și rezistă unei clasificări ușoare. Cele mai interesante povești sunt adesea cele care nu încap la nicio etichetă.",
+    "value3Title": "Contextul contează",
+    "value3Desc": "Arta nu există în vid. Plasez fiecare recenzie și eseu în contextul său cultural, istoric și social.",
+    "value4Title": "Profunzime accesibilă",
+    "value4Desc": "Ideile complexe merită un limbaj clar. Scriu pentru oricine ține la povești, nu doar pentru alți critici."
+  },
+  "projects": {
+    "pageOverline": "Portofoliu",
+    "pageTitle": "Lucrări și proiecte",
+    "pageSubtitle": "Recenzii de film și eseuri video—filtrează după tip mai jos.",
+    "categories": {
+      "all": "Toate",
+      "movieReviews": "Recenzii de film",
+      "videoContent": "Conținut video"
+    },
+    "items": {
+      "1": {
+        "title": "Recenzie: Cum tăcerea amplifică tensiunea în cinema-ul psihologic modern",
+        "description": "Analiză aprofundată a alegerilor de sound design în thriller-urile psihologice contemporane, explorând cum regizorii folosesc tăcerea ca instrument narativ.",
+        "platform": "The Criterion Observer",
+        "date": "martie 2025",
+        "impact": "Pe prima pagină, 12K citiri",
+        "tags": ["Analiză film", "Sound design", "Psihologie"]
+      },
+      "5": {
+        "title": "Eseu video: Limbajul vizual al lui Wong Kar-wai",
+        "description": "Un eseu video de 15 minute care disecă tehnici cinematografice, palete de culoare și ritmuri emoționale din filmografia lui Wong Kar-wai.",
+        "platform": "YouTube",
+        "date": "noiembrie 2024",
+        "impact": "85K vizualizări, promovat de Letterboxd",
+        "tags": ["Eseu video", "Cinematografie", "Wong Kar-wai"]
+      }
+    }
+  },
+  "contact": {
+    "overline": "Contact",
+    "title": "Să lucrăm împreună",
+    "subtitle": "Deschis la proiecte freelance, colaborări editoriale și parteneriate creative.",
+    "infoText": "Fie că cauți un critic de film, un recenzent de teatru, un contributor editorial sau un colaborator creativ—mi-ar plăcea să aud despre oportunitate.",
+    "thankYou": "Mulțumesc!",
+    "thankYouSub": "Îți voi răspunde în curând.",
+    "name": "Nume",
+    "email": "E-mail",
+    "subject": "Subiect",
+    "message": "Mesaj",
+    "send": "Trimite mesajul",
+    "sending": "Se trimite…",
+    "errorGeneric": "Ceva nu a mers bine. Te rugăm să încerci din nou."
+  },
+  "notFound": {
+    "title": "Ups! Pagina nu a fost găsită",
+    "homeLink": "Înapoi acasă"
+  }
+}

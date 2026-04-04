@@ -1,9 +1,19 @@
-import { useState } from 'react';
+import { useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { Chip } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import SectionHeading from '../components/SectionHeading';
 import ProjectCard from '../components/ProjectCard';
-import { projects, categories } from '../data/mockData';
+import { projects, projectCategories } from '../data/data';
+
+const categoryParamValues = new Set<string>(projectCategories);
+
+const categoryToTKey: Record<string, string> = {
+  All: 'projects.categories.all',
+  'Movie Reviews': 'projects.categories.movieReviews',
+  'Video Content': 'projects.categories.videoContent',
+};
 
 const Page = styled.div`
   padding-top: 72px;
@@ -25,22 +35,43 @@ const Filters = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), min(100%, 400px)));
   gap: 28px;
+  justify-content: center;
 `;
 
 const ProjectsPage = () => {
-  const [active, setActive] = useState('All');
+  const { t } = useTranslation();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const active = useMemo(() => {
+    const raw = searchParams.get('category');
+    if (raw && categoryParamValues.has(raw)) return raw;
+    return 'All';
+  }, [searchParams]);
+
+  const setFilter = (cat: string) => {
+    const next = new URLSearchParams(searchParams);
+    if (cat === 'All') next.delete('category');
+    else next.set('category', cat);
+    setSearchParams(next, { replace: true });
+  };
+
   const filtered = active === 'All' ? projects : projects.filter(p => p.category === active);
 
   return (
     <Page>
       <Section>
-        <SectionHeading overline="Portfolio" title="Work & Projects"
-          subtitle="A collection of reviews, essays, video content, and editorial projects spanning film, theater, and culture." />
+        <SectionHeading
+          overline={t('projects.pageOverline')}
+          title={t('projects.pageTitle')}
+          subtitle={t('projects.pageSubtitle')}
+        />
         <Filters>
-          {categories.map(cat => (
-            <Chip key={cat} label={cat} onClick={() => setActive(cat)}
+          {projectCategories.map(cat => (
+            <Chip
+              key={cat}
+              label={t(categoryToTKey[cat] ?? cat)}
+              onClick={() => setFilter(cat)}
               variant={active === cat ? 'filled' : 'outlined'}
               sx={{
                 fontWeight: 500, fontSize: '0.82rem',
@@ -48,7 +79,8 @@ const ProjectsPage = () => {
                   ? { bgcolor: 'hsl(38, 65%, 50%)', color: 'hsl(35, 30%, 96%)', '&:hover': { bgcolor: 'hsl(38, 65%, 42%)' } }
                   : { borderColor: 'hsl(35, 15%, 78%)', color: 'hsl(220, 10%, 40%)', '&:hover': { borderColor: 'hsl(38, 65%, 50%)' } }
                 ),
-              }} />
+              }}
+            />
           ))}
         </Filters>
         <Grid>

@@ -1,0 +1,116 @@
+{
+  "languageSwitcher": {
+    "label": "Langue"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "work": "Travaux",
+    "contact": "Contact"
+  },
+  "common": {
+    "siteName": "Sergiu Cojocari"
+  },
+  "footer": {
+    "tagline": "Écrivain et critique explorant les intersections du cinéma, du théâtre et du récit culturel.",
+    "navigate": "Navigation",
+    "explore": "Explorer",
+    "movieReviews": "Critiques de films",
+    "videoContent": "Contenu vidéo",
+    "rights": "© {{year}} Sergiu Cojocari. Tous droits réservés."
+  },
+  "social": {
+    "instagram": "Instagram",
+    "email": "E-mail",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn"
+  },
+  "home": {
+    "heroOverline": "Écrivain · Critique · Conteur",
+    "heroTagline": "Écrivain et critique centré sur le cinéma, le théâtre et le récit culturel.",
+    "heroIntro": "J'explore comment les histoires se racontent—à l'écran, sur scène et dans la culture au sens large. Par des critiques, des essais et des projets éditoriaux, j'examine l'artisanat derrière les récits qui façonnent notre regard sur le monde.",
+    "ctaExplore": "Découvrir mon travail",
+    "ctaTouch": "Me contacter",
+    "featuredOverline": "À la une",
+    "featuredTitle": "Projets sélectionnés",
+    "featuredSubtitle": "Critiques de cinéma et de théâtre, ainsi que vidéos-essais et travaux vidéo critiques.",
+    "quote": "La meilleure critique n'évalue pas seulement—elle éclaire. Elle révèle ce que nous ressentions sans pouvoir le nommer.",
+    "quoteSource": "Sergiu Cojocari",
+    "ctaOverline": "Restons en contact",
+    "ctaTitle": "Intéressé par une collaboration ?",
+    "ctaSubtitle": "Mission freelance, opportunité éditoriale ou simple conversation sur le cinéma—j'aimerais avoir de vos nouvelles.",
+    "reachOut": "Écrivez-moi"
+  },
+  "about": {
+    "overline": "À propos",
+    "title": "L'histoire derrière la critique",
+    "headshotAlt": "Portrait professionnel de Sergiu Cojocari",
+    "bio1": "Je suis Sergiu Cojocari—écrivain et critique à la croisée du cinéma, du théâtre et du récit culturel. Entre New York et Londres, je passe mon temps à regarder, réfléchir et écrire sur la façon dont les histoires nous touchent.",
+    "bio2": "Mon travail est paru dans The Criterion Observer, IndieWire, Curtain Call Magazine et Theater Today. Je publie aussi « Reel & Stage », une newsletter hebdomadaire qui compte près de 5 000 abonnés passionnés par l'art du récit.",
+    "bio3": "Que je critique un premier long métrage en festival, analyse une production théâtrale audacieuse ou explore une tendance culturelle dans une série éditoriale, mon objectif reste le même : aider à voir plus clairement ce qui fait qu'une histoire résonne.",
+    "focusOverline": "Domaines d'intérêt",
+    "focusTitle": "De quoi je parle",
+    "interestFilm": "Cinéma",
+    "interestPerformance": "Performance",
+    "interestCulture": "Culture",
+    "interestStorytelling": "Récit",
+    "valuesOverline": "Philosophie",
+    "valuesTitle": "Mon approche de la critique",
+    "valuesSubtitle": "Les principes qui guident ma façon d'engager avec l'art et le récit.",
+    "value1Title": "Rigueur et chaleur",
+    "value1Desc": "La critique doit être honnête et exigeante, jamais cruelle. Une grande analyse invite le lecteur plutôt qu'elle ne le repousse.",
+    "value2Title": "Curiosité plutôt que consensus",
+    "value2Desc": "Je suis attiré par ce qui dérange, surprend et résiste à une étiquette facile. Les histoires les plus intéressantes sont souvent celles qui ne rentrent dans aucune case.",
+    "value3Title": "Le contexte compte",
+    "value3Desc": "L'art n'existe pas dans le vide. Je situe chaque critique et chaque essai dans son contexte culturel, historique et social.",
+    "value4Title": "Profondeur accessible",
+    "value4Desc": "Les idées complexes méritent un langage clair. J'écris pour quiconque aime les histoires, pas seulement pour d'autres critiques."
+  },
+  "projects": {
+    "pageOverline": "Portfolio",
+    "pageTitle": "Travaux et projets",
+    "pageSubtitle": "Critiques de films et vidéos-essais—filtrez par type ci-dessous.",
+    "categories": {
+      "all": "Tout",
+      "movieReviews": "Critiques de films",
+      "videoContent": "Contenu vidéo"
+    },
+    "items": {
+      "1": {
+        "title": "Critique : comment le silence crée la tension dans le cinéma psychologique moderne",
+        "description": "Analyse approfondie des choix de design sonore dans les thrillers psychologiques contemporains, et de l'usage du silence comme outil narratif.",
+        "platform": "The Criterion Observer",
+        "date": "mars 2025",
+        "impact": "À la une, 12 K lectures",
+        "tags": ["Analyse film", "Design sonore", "Psychologie"]
+      },
+      "5": {
+        "title": "Vidéo-essai : le langage visuel de Wong Kar-wai",
+        "description": "Une vidéo-essai de 15 minutes qui décortique les techniques cinématographiques, les palettes de couleurs et les rythmes émotionnels de la filmographie de Wong Kar-wai.",
+        "platform": "YouTube",
+        "date": "novembre 2024",
+        "impact": "85 K vues, mis en avant par Letterboxd",
+        "tags": ["Vidéo-essai", "Cinématographie", "Wong Kar-wai"]
+      }
+    }
+  },
+  "contact": {
+    "overline": "Contact",
+    "title": "Travaillons ensemble",
+    "subtitle": "Ouvert aux missions freelance, collaborations éditoriales et partenariats créatifs.",
+    "infoText": "Que vous cherchiez un critique de cinéma, un chroniqueur de théâtre, un contributeur éditorial ou un collaborateur créatif—j'aimerais connaître votre projet.",
+    "thankYou": "Merci !",
+    "thankYouSub": "Je vous répondrai bientôt.",
+    "name": "Nom",
+    "email": "E-mail",
+    "subject": "Objet",
+    "message": "Message",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours…",
+    "errorGeneric": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "notFound": {
+    "title": "Oups ! Page introuvable",
+    "homeLink": "Retour à l'accueil"
+  }
+}
