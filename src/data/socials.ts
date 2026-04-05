@@ -11,17 +11,14 @@ export interface SocialLink {
   id: SocialId;
   label: string;
   href: string;
-  /** MUI SvgIcon for this platform */
   Icon: ComponentType<SvgIconProps>;
 }
 
-/** Use in UI copy; `SOCIAL_LINKS` email entry uses the same address via `SOCIAL_EMAIL_HREF`. */
+
 export const SOCIAL_EMAIL = 'cojocari.sergiu2002@gmail.com';
 export const SOCIAL_EMAIL_HREF = `mailto:${SOCIAL_EMAIL}`;
 
-/**
- * Canonical social profiles — import `SOCIAL_LINKS` anywhere you need links or icons.
- */
+
 export const SOCIAL_LINKS: readonly SocialLink[] = [
   {
     id: 'instagram',
