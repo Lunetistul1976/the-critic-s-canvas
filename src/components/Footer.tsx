@@ -9,11 +9,14 @@ const FooterWrapper = styled.footer`
   padding: 64px 24px 32px;
 `;
 
-const FooterInner = styled.div`
+/** Set true to show the Explore links column again. */
+const SHOW_FOOTER_EXPLORE = false;
+
+const FooterInner = styled.div<{ $twoColumn: boolean }>`
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: ${p => (p.$twoColumn ? '2fr 1fr' : '2fr 1fr 1fr')};
   gap: 48px;
 
   @media (max-width: 768px) {
@@ -89,7 +92,7 @@ const Footer = () => {
 
   return (
     <FooterWrapper>
-      <FooterInner>
+      <FooterInner $twoColumn={!SHOW_FOOTER_EXPLORE}>
         <div>
           <FooterLogo>{t('common.siteName')}</FooterLogo>
           <FooterText>{t('footer.tagline')}</FooterText>
@@ -112,15 +115,20 @@ const Footer = () => {
           <FooterLink to="/projects">{t('nav.work')}</FooterLink>
           <FooterLink to="/contact">{t('nav.contact')}</FooterLink>
         </div>
-        <div>
-          <FooterHeading>{t('footer.explore')}</FooterHeading>
-          <FooterLink to={`/projects?category=${encodeURIComponent('Movie Reviews')}`}>
-            {t('footer.movieReviews')}
-          </FooterLink>
-          <FooterLink to={`/projects?category=${encodeURIComponent('Video Content')}`}>
-            {t('footer.videoContent')}
-          </FooterLink>
-        </div>
+        {SHOW_FOOTER_EXPLORE && (
+          <div>
+            <FooterHeading>{t('footer.explore')}</FooterHeading>
+            <FooterLink to={`/projects?category=${encodeURIComponent('Movie Reviews')}`}>
+              {t('footer.movieReviews')}
+            </FooterLink>
+            <FooterLink to={`/projects?category=${encodeURIComponent('Video Content')}`}>
+              {t('footer.videoContent')}
+            </FooterLink>
+            <FooterLink to={`/projects?category=${encodeURIComponent('Video essay')}`}>
+              {t('footer.videoEssay')}
+            </FooterLink>
+          </div>
+        )}
       </FooterInner>
       <BottomBar>{t('footer.rights', { year })}</BottomBar>
     </FooterWrapper>

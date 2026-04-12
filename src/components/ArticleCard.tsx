@@ -6,6 +6,8 @@ import StarIcon from '@mui/icons-material/Star';
 const Card = styled(motion.article)<{ $featured?: boolean }>`
   display: flex;
   gap: 24px;
+  height: 100%;
+  min-height: 0;
   padding: 24px;
   background: hsl(35, 25%, 98%);
   border-radius: 10px;
@@ -46,6 +48,8 @@ const Thumb = styled.div`
 const Content = styled.div`
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 `;
 
 const TopRow = styled.div`
@@ -94,6 +98,8 @@ const Excerpt = styled.p`
 const MetaRow = styled.div`
   display: flex;
   gap: 16px;
+  margin-top: auto;
+  padding-top: 4px;
   font-size: 0.75rem;
   color: hsl(220, 10%, 55%);
 `;

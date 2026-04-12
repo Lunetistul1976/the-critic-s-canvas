@@ -90,6 +90,7 @@ const Section = styled.section`
 
 const FeaturedGrid = styled.div`
   display: grid;
+  align-items: stretch;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), min(100%, 400px)));
   gap: 28px;
   justify-content: center;

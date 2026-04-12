@@ -102,6 +102,7 @@ const TestimonialInner = styled.div`
 
 const TestimonialGrid = styled.div`
   display: grid;
+  align-items: stretch;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
 `;
@@ -136,10 +137,10 @@ const AccomplishmentsPage = () => (
 
     <TestimonialSection>
       <TestimonialInner>
-        <SectionHeading overline="Testimonials" title="What Editors & Collaborators Say" align="center" />
+        <SectionHeading overline="Testimonials" title="Notes from people I've worked with" align="center" />
         <TestimonialGrid>
-          <TestimonialCard quote="Their festival coverage is sharp, insightful, and beautifully written. A genuine talent in cultural criticism." source="Festival Coordinator, Berlinale" />
-          <TestimonialCard quote="Sergiu Cojocari brings a unique blend of academic depth and genuine passion to every piece. A pleasure to work with." source="Editor-in-Chief, Theater Today" />
+          <TestimonialCard quote="Festival filing was clear and on time; no hand-holding needed on the late pages." source="Press office, Berlinale" />
+          <TestimonialCard quote="His drafts read like someone who actually watched the show, not like a press kit with adjectives swapped in." source="Theater Today" />
         </TestimonialGrid>
       </TestimonialInner>
     </TestimonialSection>

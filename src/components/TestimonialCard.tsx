@@ -3,6 +3,10 @@ import { motion } from 'framer-motion';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 
 const Card = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
   background: hsl(35, 25%, 98%);
   border-radius: 10px;
   padding: 32px;
@@ -25,6 +29,8 @@ const Quote = styled.blockquote`
 `;
 
 const Source = styled.cite`
+  margin-top: auto;
+  padding-top: 12px;
   font-style: normal;
   font-size: 0.82rem;
   color: hsl(220, 10%, 45%);
@@ -41,7 +47,7 @@ const TestimonialCard = ({ quote, source }: Props) => (
     viewport={{ once: true }} transition={{ duration: 0.4 }}>
     <QuoteIcon><FormatQuoteIcon sx={{ fontSize: 36 }} /></QuoteIcon>
     <Quote>{quote}</Quote>
-    <Source>— {source}</Source>
+    <Source>{source}</Source>
   </Card>
 );
 

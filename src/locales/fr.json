@@ -12,11 +12,12 @@
     "siteName": "Sergiu Cojocari"
   },
   "footer": {
-    "tagline": "Écrivain et critique explorant les intersections du cinéma, du théâtre et du récit culturel.",
+    "tagline": "Écrivain et critique à Bucarest. Surtout cinéma et télévision.",
     "navigate": "Navigation",
     "explore": "Explorer",
     "movieReviews": "Critiques de films",
     "videoContent": "Contenu vidéo",
+    "videoEssay": "Vidéos-essais",
     "rights": "© {{year}} Sergiu Cojocari. Tous droits réservés."
   },
   "social": {
@@ -27,27 +28,27 @@
   },
   "home": {
     "heroOverline": "Écrivain · Critique · Conteur",
-    "heroTagline": "Écrivain et critique centré sur le cinéma, le théâtre et le récit culturel.",
-    "heroIntro": "J'explore comment les histoires se racontent—à l'écran, sur scène et dans la culture au sens large. Par des critiques, des essais et des projets éditoriaux, j'examine l'artisanat derrière les récits qui façonnent notre regard sur le monde.",
+    "heroTagline": "Écrivain et critique en herbe, axé sur le cinéma et la télévision.",
+    "heroIntro": "J'ai à cœur d'analyser et de décrypter les secrets du cinéma qui définissent notre perception en tant que spectateurs. Fort d'un intérêt pour l'écriture, je veux explorer les voies du cinéma et en faire partie en tant qu'auteur et réalisateur.",
     "ctaExplore": "Découvrir mon travail",
     "ctaTouch": "Me contacter",
     "featuredOverline": "À la une",
     "featuredTitle": "Projets sélectionnés",
-    "featuredSubtitle": "Critiques de cinéma et de théâtre, ainsi que vidéos-essais et travaux vidéo critiques.",
-    "quote": "La meilleure critique n'évalue pas seulement—elle éclaire. Elle révèle ce que nous ressentions sans pouvoir le nommer.",
-    "quoteSource": "Sergiu Cojocari",
+    "featuredSubtitle": "Vidéos-essais et textes plus longs sur le cinéma. D'autres arrivent.",
+    "quote": "Le cinéma, c'est une question de ce qui est dans le cadre et de ce qui n'y est pas.",
+    "quoteSource": "Martin Scorsese",
     "ctaOverline": "Restons en contact",
-    "ctaTitle": "Intéressé par une collaboration ?",
-    "ctaSubtitle": "Mission freelance, opportunité éditoriale ou simple conversation sur le cinéma—j'aimerais avoir de vos nouvelles.",
+    "ctaTitle": "Envie de travailler ensemble ?",
+    "ctaSubtitle": "Mission freelance, commande, ou tu viens de voir un truc bizarre et tu veux comparer tes impressions. Dans tous les cas, écris-moi.",
     "reachOut": "Écrivez-moi"
   },
   "about": {
     "overline": "À propos",
-    "title": "L'histoire derrière la critique",
+    "title": "En bref",
     "headshotAlt": "Portrait professionnel de Sergiu Cojocari",
-    "bio1": "Je suis Sergiu Cojocari—écrivain et critique à la croisée du cinéma, du théâtre et du récit culturel. Entre New York et Londres, je passe mon temps à regarder, réfléchir et écrire sur la façon dont les histoires nous touchent.",
-    "bio2": "Mon travail est paru dans The Criterion Observer, IndieWire, Curtain Call Magazine et Theater Today. Je publie aussi « Reel & Stage », une newsletter hebdomadaire qui compte près de 5 000 abonnés passionnés par l'art du récit.",
-    "bio3": "Que je critique un premier long métrage en festival, analyse une production théâtrale audacieuse ou explore une tendance culturelle dans une série éditoriale, mon objectif reste le même : aider à voir plus clairement ce qui fait qu'une histoire résonne.",
+    "bio1": "Je suis Cojocari Sergiu, auteur et créateur de contenu en herbe, passionné par les films et les séries du monde entier. Centré sur la narration, je cherche à comprendre le fonctionnement du cinéma et à partager mon avis sous forme de vidéos-essais.",
+    "bio2": "Basé à Bucarest, en Roumanie, je suis profondément passionné par les cultures et identités qui composent le cinéma dans son ensemble. À travers mon travail, j'espère donner un aperçu du métier du cinéma et expliquer pourquoi il compte tant pour l'humanité comme moyen d'exprimer notre regard sur le monde.",
+    "bio3": "Je suis aussi ouvert à d'autres opportunités : le scénario et le montage vidéo m'intéressent beaucoup, et j'apprends et je m'exerce constamment dans ces domaines.",
     "focusOverline": "Domaines d'intérêt",
     "focusTitle": "De quoi je parle",
     "interestFilm": "Cinéma",
@@ -55,50 +56,64 @@
     "interestCulture": "Culture",
     "interestStorytelling": "Récit",
     "valuesOverline": "Philosophie",
-    "valuesTitle": "Mon approche de la critique",
-    "valuesSubtitle": "Les principes qui guident ma façon d'engager avec l'art et le récit.",
-    "value1Title": "Rigueur et chaleur",
-    "value1Desc": "La critique doit être honnête et exigeante, jamais cruelle. Une grande analyse invite le lecteur plutôt qu'elle ne le repousse.",
-    "value2Title": "Curiosité plutôt que consensus",
-    "value2Desc": "Je suis attiré par ce qui dérange, surprend et résiste à une étiquette facile. Les histoires les plus intéressantes sont souvent celles qui ne rentrent dans aucune case.",
-    "value3Title": "Le contexte compte",
-    "value3Desc": "L'art n'existe pas dans le vide. Je situe chaque critique et chaque essai dans son contexte culturel, historique et social.",
-    "value4Title": "Profondeur accessible",
-    "value4Desc": "Les idées complexes méritent un langage clair. J'écris pour quiconque aime les histoires, pas seulement pour d'autres critiques."
+    "valuesTitle": "Comment j'écris",
+    "valuesSubtitle": "Quelques règles simples que j'essaie de tenir.",
+    "value1Title": "Direct, sans mépris",
+    "value1Desc": "Honnête oui, méchant pour briller non. J'écris comme j'expliquerais le film à un pote autour d'une table de cuisine.",
+    "value2Title": "De la place pour les films bizarres",
+    "value2Desc": "Ce auquel je reviens tient rarement dans une seule case genre. J'aime le texte qui laisse le désordre plutôt que de le lisser.",
+    "value3Title": "D'où ça vient, ça compte",
+    "value3Desc": "Budget, langue, qui est dans la salle: tout ça modèle l'image. Je ne fais pas comme si c'était interdit d'en parler.",
+    "value4Title": "Garder la porte ouverte",
+    "value4Desc": "Les idées dures n'ont pas besoin de phrases tordues. Quelqu'un qui ne lit pas de théorie pour le plaisir doit quand même suivre."
   },
   "projects": {
     "pageOverline": "Portfolio",
     "pageTitle": "Travaux et projets",
-    "pageSubtitle": "Critiques de films et vidéos-essais—filtrez par type ci-dessous.",
+    "pageSubtitle": "Critiques de films et vidéos-essais. Filtre ci-dessous si tu sais ce que tu cherches.",
+    "comingSoon": "Bientôt",
     "categories": {
       "all": "Tout",
       "movieReviews": "Critiques de films",
-      "videoContent": "Contenu vidéo"
+      "videoContent": "Contenu vidéo",
+      "videoEssay": "Vidéo-essai"
     },
     "items": {
       "1": {
-        "title": "Critique : comment le silence crée la tension dans le cinéma psychologique moderne",
-        "description": "Analyse approfondie des choix de design sonore dans les thrillers psychologiques contemporains, et de l'usage du silence comme outil narratif.",
-        "platform": "The Criterion Observer",
-        "date": "mars 2025",
-        "impact": "À la une, 12 K lectures",
-        "tags": ["Analyse film", "Design sonore", "Psychologie"]
-      },
-      "5": {
-        "title": "Vidéo-essai : le langage visuel de Wong Kar-wai",
-        "description": "Une vidéo-essai de 15 minutes qui décortique les techniques cinématographiques, les palettes de couleurs et les rythmes émotionnels de la filmographie de Wong Kar-wai.",
+        "title": "Ghostlight - faire le deuil d'un être cher",
+        "description": "Une analyse du film de 2024 « Ghostlight » et de la manière dont il aborde la perte d'un être cher.",
         "platform": "YouTube",
-        "date": "novembre 2024",
-        "impact": "85 K vues, mis en avant par Letterboxd",
-        "tags": ["Vidéo-essai", "Cinématographie", "Wong Kar-wai"]
+        "date": "9 mars 2025",
+        "tags": ["Vidéo-essai", "Analyse film", "Cinéma indépendant"]
+      },
+      "2": {
+        "title": "Pourquoi Lumon torture-t-il Gemma Scout ?",
+        "description": "Discussion sur les deux premières saisons de « Severance » et prédiction sur la saison suivante.",
+        "platform": "YouTube",
+        "date": "11 avril 2025",
+        "tags": ["Analyse", "Prédictions"]
+      },
+      "3": {
+        "title": "Le néant à l'écran",
+        "description": "Analyse de la façon dont les valeurs asiatiques et les techniques de tournage enrichissent le cinéma occidental.",
+        "platform": "YouTube",
+        "date": "25 août 2025",
+        "tags": ["Vidéo-essai", "Analyse", "Cinéma transculturel"]
+      },
+      "4": {
+        "title": "L'art du profilage - Mindhunter",
+        "description": "Un vidéo-essai sur les compétences qu'Holden Ford et Bill Tench tirent des plus grands criminels américains, qui les ont aidés à obtenir l'aveu du tueur Gene Devier.",
+        "platform": "YouTube",
+        "date": "27 février 2026",
+        "tags": ["Vidéo-essai", "Analyse"]
       }
     }
   },
   "contact": {
     "overline": "Contact",
     "title": "Travaillons ensemble",
-    "subtitle": "Ouvert aux missions freelance, collaborations éditoriales et partenariats créatifs.",
-    "infoText": "Que vous cherchiez un critique de cinéma, un chroniqueur de théâtre, un contributeur éditorial ou un collaborateur créatif—j'aimerais connaître votre projet.",
+    "subtitle": "Ouvert aux textes payants, au vidéo et aux collabs qui ont vraiment du sens.",
+    "infoText": "Écriture sur le cinéma, vidéo, coup de main sur un scénario ou un truc que tu n'arrives pas à nommer. Envoie un mot, on voit si ça colle.",
     "thankYou": "Merci !",
     "thankYouSub": "Je vous répondrai bientôt.",
     "name": "Nom",
@@ -107,10 +122,10 @@
     "message": "Message",
     "send": "Envoyer le message",
     "sending": "Envoi en cours…",
-    "errorGeneric": "Une erreur s'est produite. Veuillez réessayer."
+    "errorGeneric": "Ça ne s'est pas envoyé. Réessaie dans une minute."
   },
   "notFound": {
-    "title": "Oups ! Page introuvable",
+    "title": "Page introuvable",
     "homeLink": "Retour à l'accueil"
   }
 }

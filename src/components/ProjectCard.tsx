@@ -6,6 +6,10 @@ import type { Project } from '../data/data';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 const Card = styled(motion.article)`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
   background: hsl(35, 25%, 98%);
   border-radius: 10px;
   overflow: hidden;
@@ -21,6 +25,7 @@ const Card = styled(motion.article)`
 
 const ImageWrapper = styled.div`
   position: relative;
+  flex-shrink: 0;
   overflow: hidden;
   height: 220px;
 
@@ -34,6 +39,18 @@ const ImageWrapper = styled.div`
   ${Card}:hover & img {
     transform: scale(1.05);
   }
+`;
+
+const CardLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+`;
+
+const CardShell = styled.span`
+  display: block;
+  height: 100%;
 `;
 
 const CategoryBadge = styled.span`
@@ -52,7 +69,15 @@ const CategoryBadge = styled.span`
 `;
 
 const Content = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
   padding: 20px 24px 24px;
+`;
+
+const ContentBottom = styled.div`
+  margin-top: auto;
 `;
 
 const Title = styled.h3`
@@ -102,6 +127,7 @@ const ImpactBadge = styled.div`
 const categoryToTKey: Record<string, string> = {
   'Movie Reviews': 'projects.categories.movieReviews',
   'Video Content': 'projects.categories.videoContent',
+  'Video essay': 'projects.categories.videoEssay',
 };
 
 const ProjectCard = ({ project }: { project: Project }) => {
@@ -120,9 +146,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
     ? t(categoryToTKey[project.category])
     : project.category;
 
-  return (
-    <Card initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }} transition={{ duration: 0.4 }}>
+  const href =
+    project.link && project.link !== '#' && /^https?:\/\//i.test(project.link)
+      ? project.link
+      : undefined;
+
+  const cardInner = (
+    <>
       <ImageWrapper>
         <img src={project.thumbnail} alt={title} loading="lazy" />
         <CategoryBadge>{categoryLabel}</CategoryBadge>
@@ -130,24 +160,51 @@ const ProjectCard = ({ project }: { project: Project }) => {
       <Content>
         <Title>{title}</Title>
         <Desc>{description}</Desc>
-        <Meta>
-          <span>{platform}</span>
-          <span>{date}</span>
-        </Meta>
-        <Tags>
-          {tags.map(tag => (
-            <Chip key={tag} label={tag} size="small" variant="outlined"
-              sx={{ fontSize: '0.7rem', height: 24, borderColor: 'hsl(35, 15%, 80%)', color: 'hsl(220, 10%, 45%)' }} />
-          ))}
-        </Tags>
-        {impact && (
-          <ImpactBadge>
-            <OpenInNewIcon sx={{ fontSize: 14 }} />
-            {impact}
-          </ImpactBadge>
-        )}
+        <ContentBottom>
+          <Meta>
+            <span>{platform}</span>
+            <span>{date}</span>
+          </Meta>
+          <Tags>
+            {tags.map(tag => (
+              <Chip
+                key={tag}
+                label={tag}
+                size="small"
+                variant="outlined"
+                onClick={href ? e => e.stopPropagation() : undefined}
+                sx={{ fontSize: '0.7rem', height: 24, borderColor: 'hsl(35, 15%, 80%)', color: 'hsl(220, 10%, 45%)' }}
+              />
+            ))}
+          </Tags>
+          {impact && (
+            <ImpactBadge>
+              <OpenInNewIcon sx={{ fontSize: 14 }} />
+              {impact}
+            </ImpactBadge>
+          )}
+        </ContentBottom>
       </Content>
+    </>
+  );
+
+  const card = (
+    <Card
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+    >
+      {cardInner}
     </Card>
+  );
+
+  return href ? (
+    <CardLink href={href} target="_blank" rel="noopener noreferrer">
+      {card}
+    </CardLink>
+  ) : (
+    <CardShell>{card}</CardShell>
   );
 };
 

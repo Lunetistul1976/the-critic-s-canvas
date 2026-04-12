@@ -33,19 +33,50 @@ export interface Accomplishment {
 
 export const projects: Project[] = [
   {
-    id: '1', title: 'Review: How Silence Drives Tension in Modern Psychological Cinema',
-    category: 'Movie Reviews', description: 'An in-depth analysis of sound design choices in contemporary psychological thrillers, exploring how directors use silence as a narrative tool.',
-    platform: 'The Criterion Observer', date: 'March 2025', tags: ['Film Analysis', 'Sound Design', 'Psychology'],
-    thumbnail: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600', link: '#', impact: 'Featured on front page, 12K reads'
+    id: '1',
+    title: 'Ghostlight - How to Cope With The Loss of a Loved One',
+    category: 'Video essay',
+    description: 'An analysis on the 2024 film "Ghostlight" and the way it copes with the loss of a loved one.',
+    platform: 'YouTube',
+    date: '9 March 2025',
+    tags: ['Video essay', 'Film analysis', 'Independent film'],
+    thumbnail: '/projects/ghostlight.png',
+    link: 'https://www.youtube.com/watch?v=P0gZPm0eWgM',
   },
-  
   {
-    id: '5', title: 'Video Essay: The Visual Language of Wong Kar-wai',
-    category: 'Video Content', description: 'A 15-minute video essay dissecting the cinematographic techniques, color palettes, and emotional rhythms in Wong Kar-wai\'s filmography.',
-    platform: 'YouTube', date: 'November 2024', tags: ['Video Essay', 'Cinematography', 'Wong Kar-wai'],
-    thumbnail: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=600', link: '#', impact: '85K views, featured by Letterboxd'
+    id: '2',
+    title: 'Why is Lumon Torturing Gemma Scout?',
+    category: 'Video essay',
+    description: 'A discussion on the content of the first 2 seasons of "Severance" and a prediction on the content of the next season.',
+    platform: 'YouTube',
+    date: '11 April 2025',
+    tags: ['Analysis', 'Predictions'],
+    thumbnail: '/projects/severance-gemma.png',
+    link: 'https://www.youtube.com/watch?v=0Ts40-RvZxM&t=342s',
   },
-  
+  {
+    id: '3',
+    title: 'Nothingness on the Screen',
+    category: 'Video essay',
+    description: 'An analysis on the way that Asian values and filming techniques enrich the western way of moviemaking.',
+    platform: 'YouTube',
+    date: '25 August 2025',
+    tags: ['Video essay', 'Analysis', 'Cross-cultural cinema'],
+    thumbnail: '/projects/nothingness-screen.png',
+    link: 'https://www.youtube.com/watch?v=-fhplvL8XDg',
+  },
+  {
+    id: '4',
+    title: 'The Art of Profiling - Mindhunter',
+    category: 'Video essay',
+    description:
+      "A video essay about the skills Holden Ford and Bill Tench learn from the U.S.' biggest criminals that helped them secure a confession from the killer Gene Devier.",
+    platform: 'YouTube',
+    date: '27 February 2026',
+    tags: ['Video essay', 'Analysis'],
+    thumbnail: '/projects/mindhunter-profiling.png',
+    link: 'https://www.youtube.com/watch?v=VQHZK_H8vJE&t=16s',
+  },
 ];
 
 export const articles: Article[] = [
@@ -88,16 +119,17 @@ export const articles: Article[] = [
 ];
 
 export const accomplishments: Accomplishment[] = [
-  { id: '1', title: 'Published in The Criterion Observer', type: 'Publication', description: 'Regular contributor covering contemporary cinema analysis and retrospective reviews.', year: '2024–Present' },
+  { id: '1', title: 'Published in The Criterion Observer', type: 'Publication', description: 'Regular contributor covering contemporary cinema analysis and retrospective reviews.', year: '2024 to present' },
   { id: '2', title: 'Berlinale Press Accreditation', type: 'Recognition', description: 'Accredited press member at the 75th Berlin International Film Festival.', year: '2025' },
   { id: '3', title: 'Film Criticism Fellowship Finalist', type: 'Competition', description: 'Selected as a finalist for the annual Emerging Critics Fellowship by the National Society of Film Critics.', year: '2024' },
-  { id: '4', title: 'Newsletter: 4,800+ Subscribers', type: 'Audience Growth', description: 'Built "Reel & Stage," a weekly newsletter on film and theater, to nearly 5,000 engaged subscribers.', year: '2023–Present' },
-  { id: '5', title: 'Guest Columnist — IndieWire', type: 'Publication', description: 'Invited to write a guest column on emerging voices in independent European cinema.', year: '2025' },
-  { id: '6', title: 'Theater Coverage — Edinburgh Fringe', type: 'Event Coverage', description: 'Provided daily coverage of the Edinburgh Festival Fringe, publishing 12 reviews across two weeks.', year: '2024' },
+  { id: '4', title: 'Newsletter: 4,800+ Subscribers', type: 'Audience Growth', description: 'Built "Reel & Stage," a weekly newsletter on film and theater, to nearly 5,000 engaged subscribers.', year: '2023 to present' },
+  { id: '5', title: 'Guest Columnist, IndieWire', type: 'Publication', description: 'Invited to write a guest column on emerging voices in independent European cinema.', year: '2025' },
+  { id: '6', title: 'Theater Coverage, Edinburgh Fringe', type: 'Event Coverage', description: 'Provided daily coverage of the Edinburgh Festival Fringe, publishing 12 reviews across two weeks.', year: '2024' },
   { id: '7', title: 'Collaboration with Letterboxd', type: 'Partnership', description: 'Video essay featured on Letterboxd\'s official social channels, reaching 200K+ viewers.', year: '2024' },
-  { id: '8', title: 'Editor Quote — Curtain Call Magazine', type: 'Testimonial', description: '"One of the most thoughtful emerging voices in theater criticism. Their writing has a rare combination of rigor and warmth." — Senior Editor', year: '2024' },
+  { id: '8', title: 'Editor Quote, Curtain Call Magazine', type: 'Testimonial', description: '"One of the most thoughtful emerging voices in theater criticism. Their writing has a rare combination of rigor and warmth." Senior Editor.', year: '2024' },
 ];
 
 
-export const projectCategories = ['All', 'Movie Reviews', 'Video Content'] as const;
+/** Enabled filters first; disabled categories show a coming-soon overlay on the projects page. */
+export const projectCategories = ['All', 'Video essay', 'Movie Reviews', 'Video Content'] as const;
 export const articleCategories = ['All', 'Film Analysis', 'Theater Commentary', 'Culture Writing'];

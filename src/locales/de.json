@@ -12,11 +12,12 @@
     "siteName": "Sergiu Cojocari"
   },
   "footer": {
-    "tagline": "Kreativer Autor und Kritiker an der Schnittstelle von Film, Theater und kulturellem Erzählen.",
+    "tagline": "Autor und Kritiker aus Bukarest. Schwerpunkt Film und Fernsehen.",
     "navigate": "Navigation",
     "explore": "Entdecken",
     "movieReviews": "Filmkritiken",
     "videoContent": "Video-Inhalte",
+    "videoEssay": "Video-Essays",
     "rights": "© {{year}} Sergiu Cojocari. Alle Rechte vorbehalten."
   },
   "social": {
@@ -27,27 +28,27 @@
   },
   "home": {
     "heroOverline": "Autor · Kritiker · Erzähler",
-    "heroTagline": "Kreativer Autor und Kritiker mit Schwerpunkt Film, Theater und kulturelles Storytelling.",
-    "heroIntro": "Ich untersuche, wie Geschichten erzählt werden—auf der Leinwand, auf der Bühne und in der Kultur insgesamt. In Kritiken, Essays und Redaktionsprojekten betrachte ich das Handwerk hinter den Erzählungen, die unser Weltbild prägen.",
+    "heroTagline": "Aufstrebender Autor und Kritiker mit Schwerpunkt Film und Fernsehen.",
+    "heroIntro": "Ich analysiere und entschlüssele leidenschaftlich die Geheimnisse des Kinos, die unsere Wahrnehmung als Zuschauer prägen. Mit Interesse am Schreiben möchte ich die Wege des Kinos erkunden und als Autor und Regisseur Teil davon werden.",
     "ctaExplore": "Meine Arbeit entdecken",
     "ctaTouch": "Kontakt aufnehmen",
     "featuredOverline": "Hervorgehoben",
     "featuredTitle": "Ausgewählte Projekte",
-    "featuredSubtitle": "Film- und Theaterkritiken sowie Video-Essays und kritische Videolarbeit.",
-    "quote": "Die beste Kritik bewertet nicht nur—sie erhellt. Sie macht sichtbar, was wir fühlten, aber nicht benennen konnten.",
-    "quoteSource": "Sergiu Cojocari",
+    "featuredSubtitle": "Video-Essays und längere Texte über Film. Es kommt noch mehr.",
+    "quote": "Kino ist eine Frage dessen, was im Bild ist und was nicht.",
+    "quoteSource": "Martin Scorsese",
     "ctaOverline": "Lassen Sie uns sprechen",
-    "ctaTitle": "Interesse an einer Zusammenarbeit?",
-    "ctaSubtitle": "Ob freier Auftrag, redaktionelle Chance oder ein Gespräch über Kino—Ich freue mich auf Ihre Nachricht.",
+    "ctaTitle": "Lust auf ein gemeinsames Projekt?",
+    "ctaSubtitle": "Freier Auftrag, Auftrag, oder du hast gerade etwas Seltsames gesehen und willst Eindrücke vergleichen. Schreib mir in jedem Fall.",
     "reachOut": "Nachricht senden"
   },
   "about": {
     "overline": "Über mich",
-    "title": "Die Geschichte hinter der Kritik",
+    "title": "Kurz gesagt",
     "headshotAlt": "Professionelles Porträt von Sergiu Cojocari",
-    "bio1": "Ich bin Sergiu Cojocari—Autor und Kritiker an der Schnittstelle von Film, Theater und kulturellem Erzählen. Zwischen New York und London verbringe ich meine Zeit damit zuzusehen, nachzudenken und darüber zu schreiben, wie Geschichten uns bewegen.",
-    "bio2": "Meine Texte erschienen in The Criterion Observer, IndieWire, Curtain Call Magazine und Theater Today. Außerdem gibt es „Reel & Stage“, einen wöchentlichen Newsletter mit fast 5.000 Abonnenten, die sich für narrative Handwerkskunst interessieren.",
-    "bio3": "Ob ich ein Debüt auf einem Festival bespreche, eine mutige Theaterproduktion analysiere oder einen kulturellen Trend in einer Serie erkunde—mein Ziel bleibt: Menschen klarer sehen zu lassen, was eine Geschichte trägt.",
+    "bio1": "Ich bin Cojocari Sergiu, ein aufstrebender Autor und Content-Ersteller mit großer Leidenschaft für Filme und TV-Serien aus aller Welt. Mit Fokus auf Storytelling versuche ich zu verstehen, wie Kino funktioniert, und teile meine Meinungen in Form von Video-Essays.",
+    "bio2": "In Bukarest, Rumänien, bin ich tief interessiert an den verschiedenen Kulturen und Identitäten, die das Kino insgesamt ausmachen. Mit meiner Arbeit möchte ich Einblicke in das Handwerk des Kinos geben und zeigen, warum es der Menschheit so wichtig ist, ihre Perspektive auf die Welt auszudrücken.",
+    "bio3": "Ich bin auch offen für andere Möglichkeiten, da mich Drehbuchschreiben und Videoschnitt stark interessieren; ich lerne und übe in diesen Bereichen ständig.",
     "focusOverline": "Schwerpunkte",
     "focusTitle": "Worüber ich schreibe",
     "interestFilm": "Film",
@@ -55,50 +56,64 @@
     "interestCulture": "Kultur",
     "interestStorytelling": "Storytelling",
     "valuesOverline": "Haltung",
-    "valuesTitle": "Mein Ansatz in der Kritik",
-    "valuesSubtitle": "Die Prinzipien, die mein Verhältnis zu Kunst und Erzählen leiten.",
-    "value1Title": "Strenge mit Wärme",
-    "value1Desc": "Kritik soll ehrlich und anspruchsvoll sein, niemals grausam. Große Analyse lädt ein statt auszuschließen.",
-    "value2Title": "Neugier statt Konsens",
-    "value2Desc": "Mich zieht Arbeit an, die herausfordert, überrascht und sich einfachen Schubladen widersetzt. Die spannendsten Geschichten passen oft in keine Kategorie.",
-    "value3Title": "Kontext zählt",
-    "value3Desc": "Kunst steht nicht im Vakuum. Ich ordne jede Kritik und jeden Essay in seinen kulturellen, historischen und sozialen Kontext ein.",
-    "value4Title": "Zugängliche Tiefe",
-    "value4Desc": "Komplexe Ideen verdienen klare Sprache. Ich schreibe für alle, denen Geschichten wichtig sind—nicht nur für andere Kritiker."
+    "valuesTitle": "Wie ich schreibe",
+    "valuesSubtitle": "Ein paar Daumenregeln, an die ich mich halte.",
+    "value1Title": "Ehrlich, aber nicht überheblich",
+    "value1Desc": "Ehrlich ja, gemein um der Pointe willen nein. Ich schreibe so, wie ich den Film einem Freund in der Küche erklären würde.",
+    "value2Title": "Platz für seltsame Filme",
+    "value2Desc": "Was mich zurückholt, passt selten in eine Genre-Schublade. Mir gefällt Text, der das Durcheinander zulässt statt es glattzubügeln.",
+    "value3Title": "Herkunft zählt",
+    "value3Desc": "Budget, Sprache, wer im Saal sitzt: all das formt, was du siehst. Ich tue so, als wäre das kein Tabu.",
+    "value4Title": "Tür offen lassen",
+    "value4Desc": "Schwere Ideen brauchen keine verschachtelten Sätze. Jemand ohne Theorie-Hobby soll trotzdem mitkommen."
   },
   "projects": {
     "pageOverline": "Portfolio",
     "pageTitle": "Arbeit & Projekte",
-    "pageSubtitle": "Filmkritiken und Video-Essays—filtern Sie unten nach Typ.",
+    "pageSubtitle": "Filmkritiken und Video-Essays. Unten filtern, wenn du weißt, wonach du suchst.",
+    "comingSoon": "Demnächst",
     "categories": {
       "all": "Alle",
       "movieReviews": "Filmkritiken",
-      "videoContent": "Video-Inhalte"
+      "videoContent": "Video-Inhalte",
+      "videoEssay": "Video-Essay"
     },
     "items": {
       "1": {
-        "title": "Kritik: Wie Stille Spannung im modernen Psychothriller erzeugt",
-        "description": "Eine vertiefte Analyse von Sounddesign in zeitgenössischen Psychothrillern und wie Regisseur:innen Stille als narratives Mittel einsetzen.",
-        "platform": "The Criterion Observer",
-        "date": "März 2025",
-        "impact": "Auf der Startseite, 12K Aufrufe",
-        "tags": ["Filmanalyse", "Sounddesign", "Psychologie"]
-      },
-      "5": {
-        "title": "Video-Essay: Die Bildsprache von Wong Kar-wai",
-        "description": "Ein 15-minütiges Video-Essay über cinematografische Techniken, Farbpaletten und emotionale Rhythmen in Wong Kar-wais Werk.",
+        "title": "Ghostlight - mit dem Verlust eines geliebten Menschen umgehen",
+        "description": "Eine Analyse des Films „Ghostlight“ (2024) und wie er den Verlust eines geliebten Menschen thematisiert.",
         "platform": "YouTube",
-        "date": "November 2024",
-        "impact": "85K Aufrufe, von Letterboxd hervorgehoben",
-        "tags": ["Video-Essay", "Cinematografie", "Wong Kar-wai"]
+        "date": "9. März 2025",
+        "tags": ["Video-Essay", "Filmanalyse", "Independent-Film"]
+      },
+      "2": {
+        "title": "Warum foltert Lumon Gemma Scout?",
+        "description": "Eine Diskussion über die ersten zwei Staffeln von „Severance“ und eine Prognose zur nächsten Staffel.",
+        "platform": "YouTube",
+        "date": "11. April 2025",
+        "tags": ["Analyse", "Prognosen"]
+      },
+      "3": {
+        "title": "Nichts auf der Leinwand",
+        "description": "Eine Analyse, wie asiatische Werte und Drehtechniken das westliche Filmemachen bereichern.",
+        "platform": "YouTube",
+        "date": "25. August 2025",
+        "tags": ["Video-Essay", "Analyse", "Transkulturelles Kino"]
+      },
+      "4": {
+        "title": "Die Kunst des Profilerings - Mindhunter",
+        "description": "Ein Video-Essay über die Fähigkeiten, die Holden Ford und Bill Tench von den größten Kriminellen der USA lernen, und die ihnen halfen, ein Geständnis des Killers Gene Devier zu sichern.",
+        "platform": "YouTube",
+        "date": "27. Februar 2026",
+        "tags": ["Video-Essay", "Analyse"]
       }
     }
   },
   "contact": {
     "overline": "Kontakt",
     "title": "Lassen Sie uns zusammenarbeiten",
-    "subtitle": "Offen für freie Aufträge, redaktionelle Kooperationen und kreative Partnerschaften.",
-    "infoText": "Ob Filmkritik, Theaterrezension, redaktioneller Beitrag oder kreative Kooperation—Ich höre gern von Ihrer Gelegenheit.",
+    "subtitle": "Offen für bezahltes Schreiben, Video und Kooperationen, die wirklich passen.",
+    "infoText": "Text über Film, Video, Hilfe beim Drehbuch oder etwas, das du noch nicht benennen kannst. Schreib eine Zeile, dann sehen wir weiter.",
     "thankYou": "Vielen Dank!",
     "thankYouSub": "Ich melde mich bald bei Ihnen.",
     "name": "Name",
@@ -107,10 +122,10 @@
     "message": "Nachricht",
     "send": "Nachricht senden",
     "sending": "Wird gesendet…",
-    "errorGeneric": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+    "errorGeneric": "Das ging nicht raus. Bitte in einer Minute noch einmal versuchen."
   },
   "notFound": {
-    "title": "Hoppla! Seite nicht gefunden",
+    "title": "Seite nicht gefunden",
     "homeLink": "Zur Startseite"
   }
 }
